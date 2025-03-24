@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Flower extends Model
 {
@@ -18,5 +19,15 @@ class Flower extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function classifications(): HasMany
+    {
+        return $this->hasMany(Classification::class);
+    }
+
+    public function flowerTabs(): HasMany
+    {
+        return $this->hasMany(FlowerTab::class);
     }
 }

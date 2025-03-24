@@ -51,4 +51,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Flower::class);
     }
+
+    public function classifications(): HasMany
+    {
+        return $this->hasMany(Classification::class);
+    }
+
+    public function flowerTabs(): HasMany
+    {
+        return $this->hasMany(FlowerTab::class);
+    }
 }
