@@ -17,6 +17,6 @@ class Photo extends Model
 
     public function flower(): BelongsToMany
     {
-        return $this->belongsToMany(Flower::class, 'flower_table')->withTimestamps();
+        return $this->belongsToMany(Flower::class, 'flower_photo')->withTimestamps();
     }
 }

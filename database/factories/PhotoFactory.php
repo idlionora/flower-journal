@@ -17,7 +17,8 @@ class PhotoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'alt_text' => fake()->sentence(3),
+            'source' => fake()->file('storage/sample-images', 'storage/app/public/flower-photo', false)
         ];
     }
 }
